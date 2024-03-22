@@ -55,6 +55,27 @@ class StartView extends StatelessWidget {
                     child: Text('Find Fibonacci'),
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ElevatedButton(
+                    onPressed: () async {
+                      Navigator.pushNamed(context, '/subbaldashboard');
+                    },
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      primary: Colors.black,
+                      onPrimary: Colors.white,
+                      padding:
+                          EdgeInsets.symmetric(vertical: 5, horizontal: 40),
+                    ),
+                    child: Text(
+                      'Find Balanced\nSubString',
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
               ]),
         ),
       ),

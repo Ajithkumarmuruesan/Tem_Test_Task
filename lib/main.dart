@@ -4,11 +4,11 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:provider/provider.dart';
 import 'package:tem_assessment_firebase/controllers/dashboard_controller.dart';
 import 'package:tem_assessment_firebase/controllers/fibo_dashboard_controller.dart';
+import 'package:tem_assessment_firebase/controllers/sub_bal_dashboard_controller.dart';
+import 'package:tem_assessment_firebase/view/bal_sub_dashboard/sub_bal_dashboard_view.dart';
+import 'package:tem_assessment_firebase/view/common/splash_view/splash_view.dart';
 import 'package:tem_assessment_firebase/view/fibonacci_module/fibonacci_dashboard_view.dart';
 import 'package:tem_assessment_firebase/view/file_upload_module/dashboard_view/dashboard_view.dart';
-
-import 'view/splash_view/splash_view.dart';
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -18,6 +18,9 @@ void main() async {
     ),
     ChangeNotifierProvider.value(
       value: FibonacciDashBoardController(),
+    ),
+    ChangeNotifierProvider.value(
+      value: SubBalDashBoardController(),
     ),
   ], child: MyApp()));
 }
@@ -39,6 +42,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => SplashView(),
         '/filedashboard': (context) => DashboardView(),
         '/fibdashboard': (context) => FibonacciDashboardView(),
+        '/subbaldashboard': (context) => SubBalDashBoardView(),
       },
       builder: EasyLoading.init(),
     );

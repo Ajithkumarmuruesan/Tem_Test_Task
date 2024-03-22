@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:tem_assessment_firebase/view/common/start_view/start_view.dart';
 import 'package:tem_assessment_firebase/view/file_upload_module/dashboard_view/dashboard_view.dart';
-import 'package:tem_assessment_firebase/view/start_view/start_view.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
